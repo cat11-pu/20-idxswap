@@ -1,0 +1,7 @@
+{
+  "term": "alpha",
+  "rounds": 2,
+  "queries": 6,
+  "docs1": {"d1": "alpha beta", "d2": "gamma"},
+  "docs2": {"d3": "alpha alpha", "d4": "beta"}
+}

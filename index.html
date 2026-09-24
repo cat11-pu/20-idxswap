@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>idxswap</title>
+<style>body{font-family:system-ui,sans-serif;margin:24px}pre{background:#f6f6f6;padding:10px;border-radius:6px}button{padding:6px 12px;margin-right:8px}</style>
+</head>
+<body>
+<h1>idxswap</h1>
+<button onclick="call('/status')">看状态</button>
+<button onclick="call('/search?q=a')">发一次请求</button>
+<pre id="out">点上面的按钮，结果会打在这里。</pre>
+<script>
+async function call(path) {
+  const response = await fetch(path);
+  const text = await response.text();
+  document.getElementById("out").textContent = path + " -> HTTP " + response.status + "\n" + text;
+}
+</script>
+</body>
+</html>
